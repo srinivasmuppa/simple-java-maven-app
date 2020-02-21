@@ -6,7 +6,7 @@ pipeline
     
     stage ('checkout from git Repo')
      {
-      git url: 'https://github.com/srinivasmuppa/simple-java-maven-app/'
+      git 'git@github.com:srinivasmuppa/simple-java-maven-app.git'
      }   
     stage ('compile')
     {
