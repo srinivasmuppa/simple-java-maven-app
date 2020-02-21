@@ -1,13 +1,16 @@
 pipeline 
-{
-   stage('checkout from git Repo')
-     {
-      git 'https://github.com/srinivasmuppa/simple-java-maven-app.git'
-     }   
-    stage('compile')
-    {
-     bat 'mvn package'
-    }
+{ agent any
+   stages
+   {
+   
+		stage('checkout and Build')
+		{
+			steps
+			{
+				git 'https://github.com/srinivasmuppa/simple-java-maven-app.git'
+				bat 'mvn package'
+			}   
+		
+		}
+	}
 }
-        
-      
