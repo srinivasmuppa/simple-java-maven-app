@@ -1,8 +1,7 @@
 pipeline 
 {
 
-  stages
-  {
+
     
     stage ('checkout from git Repo')
      {
@@ -12,7 +11,7 @@ pipeline
     {
      bat 'mvn package'
     }
-  }
+  
 }
         
       
