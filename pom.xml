@@ -23,11 +23,8 @@
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.0.2</version>
         <configuration>
-           <source>1.8</source>
-          <target>1.8</target>
-          <archive>
-              
-            <manifest>
+            <archive>
+             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
               <mainClass>com.mycompany.app.App</mainClass>
@@ -35,6 +32,14 @@
           </archive>
         </configuration>
       </plugin>
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+        </configuration>
+    </plugin>
     </plugins>
   </build>
 </project>
