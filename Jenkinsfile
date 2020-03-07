@@ -1,16 +1,19 @@
-pipeline 
-{ agent any
-   stages
-   {
-   
-		stage('checkout and Build')
-		{
-			steps
-			{
-				git 'https://github.com/srinivasmuppa/simple-java-maven-app.git'
-				bat 'mvn package'
-			}   
-		
-		}
-	}
+pipeline
+{
+    agent {
+        label 'node1'
+        }
+        stages{
+            stage('checkout')
+            { 
+                steps{
+                   git 'https://github.com/srinivasmuppa/simple-java-maven-app.git'
+
+
+                }
+
+
+            }
+
+        }
 }
