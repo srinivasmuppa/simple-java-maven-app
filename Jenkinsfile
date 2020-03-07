@@ -22,7 +22,7 @@ pipeline
             stage('deploy')
             {
                 steps{
-                    sh 'cp /target/*.jar /tmp'
+                    sh 'cp /root/workspace/demobuildcopy/target/*.jar /tmp'
 
                 }
             }
